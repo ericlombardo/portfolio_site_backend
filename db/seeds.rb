@@ -13,7 +13,6 @@ posts = Post.create([
   Buzz business plan stock monetization ramen founders analytics creative vesting period. Beta burn rate product management hypotheses crowdsource startup technology value proposition angel investor focus series A financing marketing launch party direct mailing. Social media deployment client release strategy. Success churn rate niche market low hanging fruit graphical user interface innovator crowdfunding termsheet research & development android paradigm shift influencer pitch lean startup. Social media graphical user interface social proof infrastructure low hanging fruit hypotheses customer. Freemium crowdsource mass market ecosystem. Supply chain user experience paradigm shift crowdsource growth hacking business model canvas bandwidth pitch vesting period. Success seed money first mover advantage metrics hypotheses. Business-to-business stealth beta incubator gamification seed round partner network. MVP traction launch party virality release seed round monetization infographic rockstar lean startup startup twitter user experience business model canvas.',
   likes: 14,
   views: 38,
-  like_pic: './src/img/icons/heart-thin.png',
   title_pic: 'https://images.pexels.com/photos/930530/pexels-photo-930530.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
   },
   
@@ -28,7 +27,6 @@ posts = Post.create([
   Buzz business plan stock monetization ramen founders analytics creative vesting period. Beta burn rate product management hypotheses crowdsource startup technology value proposition angel investor focus series A financing marketing launch party direct mailing. Social media deployment client release strategy. Success churn rate niche market low hanging fruit graphical user interface innovator crowdfunding termsheet research & development android paradigm shift influencer pitch lean startup. Social media graphical user interface social proof infrastructure low hanging fruit hypotheses customer. Freemium crowdsource mass market ecosystem. Supply chain user experience paradigm shift crowdsource growth hacking business model canvas bandwidth pitch vesting period. Success seed money first mover advantage metrics hypotheses. Business-to-business stealth beta incubator gamification seed round partner network. MVP traction launch party virality release seed round monetization infographic rockstar lean startup startup twitter user experience business model canvas.',
   likes: 4,
   views: 23,
-  like_pic: './src/img/icons/heart-thin.png',
   title_pic: 'https://images.pexels.com/photos/930530/pexels-photo-930530.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
   },
 
@@ -42,7 +40,6 @@ posts = Post.create([
   Buzz business plan stock monetization ramen founders analytics creative vesting period. Beta burn rate product management hypotheses crowdsource startup technology value proposition angel investor focus series A financing marketing launch party direct mailing. Social media deployment client release strategy. Success churn rate niche market low hanging fruit graphical user interface innovator crowdfunding termsheet research & development android paradigm shift influencer pitch lean startup. Social media graphical user interface social proof infrastructure low hanging fruit hypotheses customer. Freemium crowdsource mass market ecosystem. Supply chain user experience paradigm shift crowdsource growth hacking business model canvas bandwidth pitch vesting period. Success seed money first mover advantage metrics hypotheses. Business-to-business stealth beta incubator gamification seed round partner network. MVP traction launch party virality release seed round monetization infographic rockstar lean startup startup twitter user experience business model canvas.',
   likes: 29,
   views: 401,
-  like_pic: './src/img/icons/heart-thin.png',
   title_pic: 'https://images.pexels.com/photos/930530/pexels-photo-930530.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
   },
 
@@ -56,7 +53,6 @@ posts = Post.create([
   Buzz business plan stock monetization ramen founders analytics creative vesting period. Beta burn rate product management hypotheses crowdsource startup technology value proposition angel investor focus series A financing marketing launch party direct mailing. Social media deployment client release strategy. Success churn rate niche market low hanging fruit graphical user interface innovator crowdfunding termsheet research & development android paradigm shift influencer pitch lean startup. Social media graphical user interface social proof infrastructure low hanging fruit hypotheses customer. Freemium crowdsource mass market ecosystem. Supply chain user experience paradigm shift crowdsource growth hacking business model canvas bandwidth pitch vesting period. Success seed money first mover advantage metrics hypotheses. Business-to-business stealth beta incubator gamification seed round partner network. MVP traction launch party virality release seed round monetization infographic rockstar lean startup startup twitter user experience business model canvas.',
   likes: 58,
   views: 1203,
-  like_pic: './src/img/icons/heart-thin.png',
   title_pic: 'https://images.pexels.com/photos/930530/pexels-photo-930530.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
   },
 
@@ -70,7 +66,6 @@ posts = Post.create([
   Buzz business plan stock monetization ramen founders analytics creative vesting period. Beta burn rate product management hypotheses crowdsource startup technology value proposition angel investor focus series A financing marketing launch party direct mailing. Social media deployment client release strategy. Success churn rate niche market low hanging fruit graphical user interface innovator crowdfunding termsheet research & development android paradigm shift influencer pitch lean startup. Social media graphical user interface social proof infrastructure low hanging fruit hypotheses customer. Freemium crowdsource mass market ecosystem. Supply chain user experience paradigm shift crowdsource growth hacking business model canvas bandwidth pitch vesting period. Success seed money first mover advantage metrics hypotheses. Business-to-business stealth beta incubator gamification seed round partner network. MVP traction launch party virality release seed round monetization infographic rockstar lean startup startup twitter user experience business model canvas.',
   likes: 80,
   views: 3432,
-  like_pic: './src/img/icons/heart-thin.png',
   title_pic: 'https://images.pexels.com/photos/930530/pexels-photo-930530.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
   }
 ])
@@ -80,7 +75,7 @@ comment_list = ['This looks perfect. Just Photoshop out the dog, add a baby, and
 
 # create comment and link to a post
 Post.all.each do |post|
-  post.comments.create(likes: rand(100), content: comment_list[rand(comment_list.count)])
+  post.comments.create(likes: rand(100), content: comment_list[rand(comment_list.count)], like_pic: './src/img/icons/heart-thin.png', title_pic: 'https://images.pexels.com/photos/930530/pexels-photo-930530.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')
 end
 
 

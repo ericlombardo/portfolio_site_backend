@@ -7,7 +7,6 @@ class CreatePosts < ActiveRecord::Migration[6.1]
       t.text :content
       t.integer :likes
       t.integer :views
-      t.string :like_pic
       t.string :title_pic
 
       t.timestamps
