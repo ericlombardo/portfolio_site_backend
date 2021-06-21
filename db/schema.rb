@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_21_185413) do
+ActiveRecord::Schema.define(version: 2021_06_19_191456) do
 
   create_table "comments", force: :cascade do |t|
     t.string "content"
@@ -27,10 +27,10 @@ ActiveRecord::Schema.define(version: 2021_06_21_185413) do
     t.text "content"
     t.integer "likes"
     t.integer "views"
+    t.string "like_pic"
+    t.string "title_pic"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "title_pic"
-    t.string "like_pic"
   end
 
 end
