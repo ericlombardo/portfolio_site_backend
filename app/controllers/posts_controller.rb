@@ -10,6 +10,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1
   def show
+    post = Post.find_by(id: params[:id])
     render json: post
   end
 
