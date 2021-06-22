@@ -8,6 +8,7 @@ class CreatePosts < ActiveRecord::Migration[6.1]
       t.integer :likes
       t.integer :views
       t.string :title_pic
+      t.string :like_pic
 
       t.timestamps
     end
