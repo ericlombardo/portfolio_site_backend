@@ -3,11 +3,9 @@ class CommentsController < ApplicationController
 
   # GET /comments
   def index
-    if params[:post_id]
-      @comments = Post.find_by(id: params[:id])
-    else
-      @comments = Comment.all
-    end
+    # look through comments and find ones that have post_id of params[:post_id]
+    # render them in an array
+    @comments = Comment.all.select {|c| c.post_id == params[:post_id].to_i}
     render json: @comments
   end
 
