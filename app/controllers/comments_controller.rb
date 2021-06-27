@@ -17,10 +17,14 @@ class CommentsController < ApplicationController
 
   # POST /comments
   def create
-    @comment = Comment.new(comment_params)
-
-    if @comment.save
-      render json: @comment, status: :created, location: @comment
+    @post = Post.find_by_id(params[:post_id])
+    @comment = @post.comments.build(
+      content: params[:comment][:content],
+      likes: 0,
+      like_pic: 'src/img/icons/heart-thin.png'
+      )
+      if @comment.save
+        render json: @comment, status: :created, location: @comment
     else
       render json: @comment.errors, status: :unprocessable_entity
     end
