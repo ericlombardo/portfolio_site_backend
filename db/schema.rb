@@ -15,9 +15,6 @@ ActiveRecord::Schema.define(version: 2021_06_19_191456) do
   create_table "comments", force: :cascade do |t|
     t.string "content"
     t.integer "post_id"
-    t.integer "likes"
-    t.string "like_pic"
-    t.string "title_pic"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

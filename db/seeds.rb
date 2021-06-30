@@ -80,7 +80,7 @@ comment_list = ['This looks perfect. Just Photoshop out the dog, add a baby, and
 
 # create comment and link to a post
 Post.all.each do |post|
-  post.comments.create(likes: rand(100), content: comment_list[rand(comment_list.count)], like_pic: './src/img/icons/heart-thin.png', title_pic: 'https://images.pexels.com/photos/930530/pexels-photo-930530.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')
+  post.comments.create(content: comment_list[rand(comment_list.count)])
 end
 
 

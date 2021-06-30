@@ -18,11 +18,7 @@ class CommentsController < ApplicationController
   # POST /comments
   def create
     @post = Post.find_by_id(params[:post_id])
-    @comment = @post.comments.build(
-      content: params[:comment][:content],
-      likes: 0,
-      like_pic: 'src/img/icons/heart-thin.png'
-      )
+    @comment = @post.comments.build(content: params[:comment][:content])
       if @comment.save
         render json: @comment, status: :created, location: @comment
     else
